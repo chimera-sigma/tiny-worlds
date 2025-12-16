@@ -42,10 +42,9 @@ outputs/
 multirun/
 
 # Experiment results (large files - provide separately)
-experiments/results/*.csv
-experiments/results/*.json
-experiments/results/*.pkl
+experiments/results/**/*
 !experiments/results/README.md
+!experiments/results/**/*.json
 
 # OS
 .DS_Store
