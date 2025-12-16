@@ -1,0 +1,25 @@
+id: E1_drift_decoy_sine
+type: drift_decoy_sine
+role: decoy
+
+drift:
+  T: 64
+
+decoy_sine:
+  amp: 1.0
+  omega: 0.1
+  sigma_obs: 0.02
+
+data_gen:
+  n_train_seqs: 20000
+  n_eval_seqs: 2000
+
+obs_dim: 1
+latent_dim: 1
+input_dim: 2
+
+normalization:
+  mode: per_sequence_relative
+  rnn_input:
+    subtract_y0: true
+    scale_by_seq_std: false

@@ -1,0 +1,7 @@
+enabled: true
+n_permutations: 2000
+
+metrics:
+  delta_nll:
+    direction: higher
+    sided: one

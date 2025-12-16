@@ -1,0 +1,18 @@
+id: E2_regime_null
+type: regime_null
+role: null
+
+regime:
+  T: 128
+  marginal_p_one: 0.5   # i.i.d. Bernoulli
+
+data_gen:
+  n_train_seqs: 20000
+  n_eval_seqs: 2000
+
+obs_dim: 1          # single bit state_t ∈ {0,1}
+latent_dim: 1       # no meaningful regime (all zeros)
+input_dim: 2        # [state, time_cond]
+
+normalization:
+  mode: none        # discrete, no normalization

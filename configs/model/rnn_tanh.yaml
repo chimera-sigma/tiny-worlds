@@ -1,0 +1,12 @@
+id: rnn_tanh
+type: rnn_tanh
+
+hidden_dim: 16
+
+init:
+  type: orthogonal
+  gain: 1.0
+
+optimizer:
+  lr: 1e-3
+  weight_decay: 0.0

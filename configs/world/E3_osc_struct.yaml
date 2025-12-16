@@ -1,0 +1,26 @@
+id: E3_osc_struct
+type: oscillator
+role: structured
+
+oscillator:
+  dt: 0.05          # integration step
+  T: 256            # sequence length
+  sigma_obs: 0.05   # obs noise level
+  omega: 1.0        # base frequency
+
+data_gen:
+  n_train_seqs: 20000
+  n_eval_seqs: 2000
+
+obs_dim: 1          # we observe x only (scalar)
+latent_dim: 2       # latent is (x, y)
+input_dim: 2        # obs + time_cond
+
+normalization:
+  mode: global_zscore
+  description: >
+    For E3, the attractor is bounded and stationary in distribution.
+    Global z-score normalization over training observations is safe.
+  fit_on:
+    split: train
+    fields: [obs]

@@ -1,0 +1,17 @@
+defaults:
+  - world: E1_drift_struct
+  - model: rnn_tanh
+  - time_cond: full_time
+  - stats: permutation
+  - emergence: detection
+  - train: default
+  - logging: default
+  - _self_
+
+experiment:
+  root_dir: ./experiments
+  n_seeds: 5
+  device: cuda
+
+random:
+  master_seed: 1234

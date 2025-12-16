@@ -1,0 +1,22 @@
+id: E2_regime_struct
+type: regime_markov
+role: structured
+
+regime:
+  T: 128
+  p_same_regime0: 0.9    # Regime A: high persistence
+  p_same_regime1: 0.6    # Regime B: lower persistence
+  regime_switch:
+    type: periodic
+    period: 32           # switch every 32 steps
+
+data_gen:
+  n_train_seqs: 20000
+  n_eval_seqs: 2000
+
+obs_dim: 1          # single bit state_t ∈ {0,1}
+latent_dim: 1       # regime_t ∈ {0,1}, stored for probes
+input_dim: 2        # [state, time_cond]
+
+normalization:
+  mode: none        # discrete, no normalization

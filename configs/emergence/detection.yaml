@@ -1,0 +1,6 @@
+primary_metric: delta_nll
+thresholds:
+  weak: 0.1
+  strong: 0.5
+detection_window: 5000
+min_secondary_hits: 0

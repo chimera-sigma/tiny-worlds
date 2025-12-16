@@ -1,0 +1,9 @@
+id: gru
+type: gru
+hidden_dim: 16
+init:
+  type: orthogonal
+  gain: 1.0
+optimizer:
+  lr: 0.001
+  weight_decay: 0.0

@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-27T08:21:41.110030",
+    "world_id": "E3_osc_struct",
+    "world_type": "oscillator",
+    "model_id": "gru",
+    "model_type": "gru",
+    "time_cond_type": "full_time",
+    "readout_only": true,
+    "n_seeds": 5,
+    "master_seed": 1234,
+    "device": "cuda",
+    "output_dir": "D:\\tiny_world_model"
+  },
+  "hyperparameters": {
+    "hidden_dim": 16,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "max_steps": 20000,
+    "n_train_seqs": 20000,
+    "n_eval_seqs": 2000,
+    "sequence_length": 256
+  },
+  "per_seed_results": [
+    {
+      "seed": 1234,
+      "seed_index": 0,
+      "avg_nll_model": -1.1855721689261642,
+      "avg_nll_baseline": -0.8606566770067402,
+      "delta_nll": 0.32491549191942404,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": 0.9867856851923511,
+      "probe_mse_trained": 0.0055998568423092365,
+      "probe_r2_random": -8.906444401990399e-07,
+      "probe_mse_random": 0.423772394657135,
+      "probe_r2_permuted": -2.5856484603181684e-05,
+      "probe_mse_permuted": 0.42378297448158264
+    },
+    {
+      "seed": 1235,
+      "seed_index": 1,
+      "avg_nll_model": -1.1567486825980393,
+      "avg_nll_baseline": -0.8606566770067402,
+      "delta_nll": 0.2960920055912991,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": 0.9938252950116272,
+      "probe_mse_trained": 0.002616667188704014,
+      "probe_r2_random": -0.00028156294892034417,
+      "probe_mse_random": 0.4238913357257843,
+      "probe_r2_permuted": -1.96677692951841e-05,
+      "probe_mse_permuted": 0.4237803518772125
+    },
+    {
+      "seed": 1236,
+      "seed_index": 2,
+      "avg_nll_model": -1.2243119657628676,
+      "avg_nll_baseline": -0.8606566770067402,
+      "delta_nll": 0.3636552887561274,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": 0.9905385981954493,
+      "probe_mse_trained": 0.004009477328509092,
+      "probe_r2_random": -1.4252643400602949e-05,
+      "probe_mse_random": 0.42377805709838867,
+      "probe_r2_permuted": -0.00012635278204786715,
+      "probe_mse_permuted": 0.42382556200027466
+    },
+    {
+      "seed": 1237,
+      "seed_index": 3,
+      "avg_nll_model": -1.1848044041053922,
+      "avg_nll_baseline": -0.8606566770067402,
+      "delta_nll": 0.324147727098652,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": 0.9942141094021021,
+      "probe_mse_trained": 0.002451898530125618,
+      "probe_r2_random": 2.6114658722042883e-05,
+      "probe_mse_random": 0.42376095056533813,
+      "probe_r2_permuted": -3.6897715323114255e-05,
+      "probe_mse_permuted": 0.4237876534461975
+    },
+    {
+      "seed": 1238,
+      "seed_index": 4,
+      "avg_nll_model": -1.267566712622549,
+      "avg_nll_baseline": -0.8606566770067402,
+      "delta_nll": 0.40691003561580874,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": 0.9929665613144544,
+      "probe_mse_trained": 0.0029805744998157024,
+      "probe_r2_random": -0.00014013673887025568,
+      "probe_mse_random": 0.42383140325546265,
+      "probe_r2_permuted": -0.00010511423633174921,
+      "probe_mse_permuted": 0.4238165616989136
+    }
+  ],
+  "aggregated_metrics": {
+    "delta_nll": {
+      "mean": 0.34314410979626225,
+      "std": 0.038454771702237635,
+      "min": 0.2960920055912991,
+      "max": 0.40691003561580874,
+      "values": [
+        0.32491549191942404,
+        0.2960920055912991,
+        0.3636552887561274,
+        0.324147727098652,
+        0.40691003561580874
+      ]
+    },
+    "probe_r2_trained": {
+      "mean": 0.9916660498231968,
+      "std": 0.0027544648715575925,
+      "values": [
+        0.9867856851923511,
+        0.9938252950116272,
+        0.9905385981954493,
+        0.9942141094021021,
+        0.9929665613144544
+      ]
+    },
+    "probe_r2_random": {
+      "mean": -8.21456633818718e-05,
+      "std": 0.00011494551423632329,
+      "values": [
+        -8.906444401990399e-07,
+        -0.00028156294892034417,
+        -1.4252643400602949e-05,
+        2.6114658722042883e-05,
+        -0.00014013673887025568
+      ]
+    },
+    "probe_r2_permuted": {
+      "mean": -6.277779752021928e-05,
+      "std": 4.4103490212324775e-05,
+      "values": [
+        -2.5856484603181684e-05,
+        -1.96677692951841e-05,
+        -0.00012635278204786715,
+        -3.6897715323114255e-05,
+        -0.00010511423633174921
+      ]
+    },
+    "probe_emergence_margin": {
+      "description": "trained R\u00b2 minus max(random, permuted) R\u00b2",
+      "mean": 0.9916888119501461,
+      "values": [
+        0.9867865758367913,
+        0.9938449627809224,
+        0.9905528508388499,
+        0.99418799474338,
+        0.9930716755507861
+      ]
+    }
+  },
+  "statistical_tests": {
+    "permutation_test": {
+      "metric": "delta_nll",
+      "observed_mean": 0.34314410979626225,
+      "p_value": 0.03298350824587706,
+      "n_permutations": 2000,
+      "direction": "higher",
+      "sided": "one",
+      "null_distribution_mean": -0.0006508148782169127,
+      "null_distribution_std": 0.1535892737570014
+    }
+  }
+}

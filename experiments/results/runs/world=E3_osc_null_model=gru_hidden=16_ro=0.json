@@ -1,0 +1,167 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-27T08:36:52.748956",
+    "world_id": "E3_osc_null",
+    "world_type": "oscillator_null",
+    "model_id": "gru",
+    "model_type": "gru",
+    "time_cond_type": "full_time",
+    "readout_only": false,
+    "n_seeds": 5,
+    "master_seed": 1234,
+    "device": "cuda",
+    "output_dir": "D:\\tiny_world_model"
+  },
+  "hyperparameters": {
+    "hidden_dim": 16,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "max_steps": 20000,
+    "n_train_seqs": 20000,
+    "n_eval_seqs": 2000,
+    "sequence_length": 256
+  },
+  "per_seed_results": [
+    {
+      "seed": 1234,
+      "seed_index": 0,
+      "avg_nll_model": 81.9339488357843,
+      "avg_nll_baseline": 82.92167107843137,
+      "delta_nll": 0.9877222426470667,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": NaN,
+      "probe_mse_trained": 1.863565216808638e-06,
+      "probe_r2_random": NaN,
+      "probe_mse_random": 2.3934202886266576e-07,
+      "probe_r2_permuted": NaN,
+      "probe_mse_permuted": 4.71834982818109e-06
+    },
+    {
+      "seed": 1235,
+      "seed_index": 1,
+      "avg_nll_model": 81.89081115196079,
+      "avg_nll_baseline": 82.92167107843137,
+      "delta_nll": 1.0308599264705833,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": NaN,
+      "probe_mse_trained": 2.896118712669704e-05,
+      "probe_r2_random": NaN,
+      "probe_mse_random": 5.063582761977159e-07,
+      "probe_r2_permuted": NaN,
+      "probe_mse_permuted": 0.0001569301966810599
+    },
+    {
+      "seed": 1236,
+      "seed_index": 2,
+      "avg_nll_model": 81.88219338235294,
+      "avg_nll_baseline": 82.92167107843137,
+      "delta_nll": 1.0394776960784355,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": NaN,
+      "probe_mse_trained": 3.3055137464543805e-05,
+      "probe_r2_random": NaN,
+      "probe_mse_random": 1.1471778407212696e-06,
+      "probe_r2_permuted": NaN,
+      "probe_mse_permuted": 0.00011673512199195102
+    },
+    {
+      "seed": 1237,
+      "seed_index": 3,
+      "avg_nll_model": 81.86675882352941,
+      "avg_nll_baseline": 82.92167107843137,
+      "delta_nll": 1.0549122549019643,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": NaN,
+      "probe_mse_trained": 4.842622729483992e-05,
+      "probe_r2_random": NaN,
+      "probe_mse_random": 8.441384125035256e-07,
+      "probe_r2_permuted": NaN,
+      "probe_mse_permuted": 5.705160947400145e-05
+    },
+    {
+      "seed": 1238,
+      "seed_index": 4,
+      "avg_nll_model": 81.89726360294118,
+      "avg_nll_baseline": 82.92167107843137,
+      "delta_nll": 1.024407475490193,
+      "n_eval_samples": 510000,
+      "probe_r2_trained": NaN,
+      "probe_mse_trained": 6.748904706910253e-05,
+      "probe_r2_random": NaN,
+      "probe_mse_random": 7.775022936584719e-07,
+      "probe_r2_permuted": NaN,
+      "probe_mse_permuted": 2.1607931557809934e-05
+    }
+  ],
+  "aggregated_metrics": {
+    "delta_nll": {
+      "mean": 1.0274759191176486,
+      "std": 0.022351808949046995,
+      "min": 0.9877222426470667,
+      "max": 1.0549122549019643,
+      "values": [
+        0.9877222426470667,
+        1.0308599264705833,
+        1.0394776960784355,
+        1.0549122549019643,
+        1.024407475490193
+      ]
+    },
+    "probe_r2_trained": {
+      "mean": NaN,
+      "std": NaN,
+      "values": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ]
+    },
+    "probe_r2_random": {
+      "mean": NaN,
+      "std": NaN,
+      "values": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ]
+    },
+    "probe_r2_permuted": {
+      "mean": NaN,
+      "std": NaN,
+      "values": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ]
+    },
+    "probe_emergence_margin": {
+      "description": "trained R\u00b2 minus max(random, permuted) R\u00b2",
+      "mean": NaN,
+      "values": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ]
+    }
+  },
+  "statistical_tests": {
+    "permutation_test": {
+      "metric": "delta_nll",
+      "observed_mean": 1.0274759191176486,
+      "p_value": 0.03298350824587706,
+      "n_permutations": 2000,
+      "direction": "higher",
+      "sided": "one",
+      "null_distribution_mean": -0.0031669558578431333,
+      "null_distribution_std": 0.45637631649785987
+    }
+  }
+}

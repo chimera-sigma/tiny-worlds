@@ -1,0 +1,23 @@
+id: E1_drift_struct
+type: drift
+role: structured
+
+drift:
+  v: 0.03
+  sigma_dyn: 0.005
+  sigma_obs: 0.02
+  T: 64
+
+data_gen:
+  n_train_seqs: 20000
+  n_eval_seqs: 2000
+
+obs_dim: 1
+latent_dim: 1
+input_dim: 2   # obs + time_cond
+
+normalization:
+  mode: per_sequence_relative
+  rnn_input:
+    subtract_y0: true
+    scale_by_seq_std: false

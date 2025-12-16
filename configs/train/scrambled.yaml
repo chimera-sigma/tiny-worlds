@@ -1,0 +1,5 @@
+batch_size: 64
+max_steps: 20000
+log_interval: 500
+readout_only: false
+scramble_core: true

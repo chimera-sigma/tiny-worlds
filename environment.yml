@@ -1,0 +1,19 @@
+name: tiny_world_model
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pytorch
+  - torchvision
+  - torchaudio
+  - cpuonly
+  - numpy
+  - matplotlib
+  - pandas
+  - hydra-core
+  - pyyaml
+  - pip
+  - pip:
+      - omegaconf
