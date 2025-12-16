@@ -100,11 +100,13 @@ python -m tiny_world_model.train world=oscillator_null model=gru
 ## Citation
 
 ```bibtex
-@article{giebelhaus2025inductive,
+@software{giebelhaus2025inductive,
   title={Inductive Resonance in Gated Recurrent Networks},
   author={Giebelhaus, M. Axel},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2025}
+  year={2025},
+  publisher={Zenodo},
+  doi={10.5281/zenodo.17952632},
+  url={https://doi.org/10.5281/zenodo.17952632}
 }
 ```
 
